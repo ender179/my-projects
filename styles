@@ -23,19 +23,9 @@ h2 {
 }
 
 .projects-grid {
-    display: flex;
-    /* Для создания двух столбцов */
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
-    /* Расстояние между столбцами */
-}
-
-.column {
-    display: flex;
-    flex-direction: column-reverse;
-    /* Сортировка снизу вверх */
-    gap: 20px;
-    /* Расстояние между элементами внутри столбца */
 }
 
 .project-item {
@@ -56,11 +46,4 @@ h2 {
 .project-item h3 {
     font-size: 1.5em;
     margin: 15px 0 10px 0;
-}
-
-@media (max-width: 768px) {
-    .projects-grid {
-        flex-direction: column;
-        /* Переключаемся на одну колонку на маленьких экранах */
-    }
 }
